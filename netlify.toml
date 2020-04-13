@@ -1,5 +1,4 @@
 [build]
+  build = "yarn build"
   publish = "_site"
   functions= "functions"
-
-    
