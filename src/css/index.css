@@ -1,0 +1,377 @@
+:root {
+  --red: #C5004A;
+  --darkred: #7F0036;
+  --lightgray: #e0e0e0;
+  --gray: #C0C0C0;
+  --darkgray: #333;
+  --navy: #17050F;
+  --blue: #082840;
+  --white: #fff;
+}
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+  background: #7dc8fa;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+p,
+.tmpl-post li,
+img {
+  max-width: 37.5em; /* 600px /16 */
+}
+p,
+.tmpl-post li {
+  line-height: 1.45;
+}
+a[href] {
+  color: var(--blue);
+}
+a[href]:visited {
+  color: var(--navy);
+}
+main {
+  padding: 1rem;
+}
+main :first-child {
+  margin-top: 0;
+}
+header {
+  padding: 40px 40px 0;
+}
+header:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+table {
+  margin: 1em 0;
+}
+table td,
+table th {
+  padding-right: 1em;
+}
+
+pre,
+code {
+  font-family: Consolas, Menlo, Monaco, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", "Courier New", Courier, monospace;
+  line-height: 1.5;
+}
+pre {
+  font-size: 14px;
+  line-height: 1.375;
+  direction: ltr;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  -moz-tab-size: 2;
+  -o-tab-size: 2;
+  tab-size: 2;
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+  padding: 1em;
+  margin: .5em 0;
+  background-color: #f6f6f6;
+}
+
+h2 {
+  margin: 0;
+  padding: 0;
+  color: white;
+  font-size: 10vmin;
+  line-height: 1;
+  font-weight: bold;
+  letter-spacing: 2px;
+  font-family: 'Poppins', sans-serif;
+  text-transform: uppercase;
+}
+
+.highlight-line {
+  display: block;
+  padding: 0.125em 1em;
+  text-decoration: none; /* override del, ins, mark defaults */
+  color: inherit; /* override del, ins, mark defaults */
+}
+
+/* allow highlighting empty lines */
+.highlight-line:empty:before {
+  content: " ";
+}
+/* avoid double line breaks when using display: block; */
+.highlight-line + br {
+  display: none;
+}
+
+.highlight-line-isdir {
+  color: #b0b0b0;
+  background-color: #222;
+}
+.highlight-line-active {
+  background-color: #444;
+  background-color: hsla(0, 0%, 27%, .8);
+}
+.highlight-line-add {
+  background-color: #45844b;
+}
+.highlight-line-remove {
+  background-color: #902f2f;
+}
+
+/* Header */
+.home {
+  padding: 0 1rem;
+  float: left;
+  margin: 1rem 0; /* 16px /16 */
+  font-size: 1em; /* 16px /16 */
+}
+.home :link:not(:hover) {
+  text-decoration: none;
+}
+
+/* Nav */
+.nav {
+  padding: 0;
+  list-style: none;
+  float: left;
+  margin-left: 1em;
+}
+.nav-item {
+  display: inline-block;
+  margin-right: 1em;
+}
+.nav-item a[href]:not(:hover) {
+  text-decoration: none;
+}
+.nav-item-active {
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+/* Warning */
+.warning {
+  background-color: #ffc;
+  padding: 1em 0.625em; /* 16px 10px /16 */
+}
+.warning ol:only-child {
+  margin: 0;
+}
+
+/* Direct Links / Markdown Headers */
+.direct-link {
+  font-family: sans-serif;
+  text-decoration: none;
+  font-style: normal;
+  margin-left: .1em;
+}
+a[href].direct-link,
+a[href].direct-link:visited {
+  color: transparent;
+}
+a[href].direct-link:focus,
+a[href].direct-link:focus:visited,
+:hover > a[href].direct-link,
+:hover > a[href].direct-link:visited {
+  color: #aaa;
+}
+
+.logo-img {
+  display: block;
+  text-align: center;
+}
+
+.logo-img {
+  height: auto;
+  width: 100px;
+  position: relative;
+  margin: 0 auto;
+}
+
+.title {
+  text-align: center;
+  display: block;
+  text-decoration: none;
+}
+
+nav {
+  display: flex;
+  margin-top: 30px;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  padding: 8px 0;
+}
+
+.tmpl-products li {
+  list-style: none;
+}
+
+.product-category--items {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+}
+
+.description {
+  display: block;
+  position: absolute;
+  bottom: 12px;
+  font-style: italic;
+  font-weight: 100;
+}
+
+.tmpl-home, .tmpl-post, .tmpl-products {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper {
+  text-align: center;
+}
+
+.holder {
+  position: relative;
+  width: 200px;
+  height: 80px;
+  border: 5px solid black;
+  border-radius: 80px;
+  z-index: 1000;
+  transform: translate3d(0, 0, 0);
+  animation: pooping 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+}
+
+.toilet-paper {
+  position: absolute;
+  bottom: -20px;
+  left: 50px;
+}
+
+.toilet-paper--tube {
+  width: 50px;
+  height: 80px;
+  background: #f5f8fd;
+  border-radius: 100%;
+  position: absolute;
+  left: -4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.toilet-paper--tube:before {
+  content: "";
+  display: block;
+  width: 35px;
+  height: 5px;
+  background: black;
+  position: absolute;
+  left: 0;
+  top: 35px;
+  z-index: 1000;
+  border-radius: 0 5px 5px 0;
+}
+.toilet-paper--tube:after {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 25px;
+  background: #c4cbdc;
+  border-radius: 100%;
+}
+
+.toilet-paper--roll {
+  position: absolute;
+  z-index: 1000;
+  width: 105px;
+  height: 80px;
+  border-radius: 30px 20px 0 30px;
+  background: white;
+  bottom: -25px;
+}
+.toilet-paper--roll:after {
+  content: "";
+  display: block;
+  height: 78px;
+  width: 57px;
+  background: white;
+  position: absolute;
+  right: 0px;
+  bottom: -48px;
+}
+
+.face {
+  position: absolute;
+  width: 40%;
+  right: 10px;
+  top: 25px;
+}
+
+.eyes {
+  display: flex;
+  justify-content: space-around;
+  top: 10px;
+}
+.eyes:before, .eyes:after {
+  content: "";
+  display: block;
+  width: 8px;
+  height: 12px;
+  border-radius: 100%;
+  background: black;
+}
+
+.mouth {
+  width: 8px;
+  height: 8px;
+  background: red;
+  margin: 0 auto;
+  border-radius: 100%;
+  animation: smile 1s forwards;
+  animation-delay: 0.82s;
+}
+
+.wave {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+@keyframes smile {
+  0% {
+    border-radius: 100%;
+    width: 8px;
+    height: 8px;
+  }
+  100% {
+    height: 13px;
+    border-radius: 0 0 100% 100%;
+  }
+}
+@keyframes pooping {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  20%, 80% {
+    transform: translate3d(2px, 3px, 0);
+  }
+  30%, 50%, 70% {
+    transform: translate3d(-4px, -6px, 0);
+  }
+  40%, 60% {
+    transform: translate3d(4px, 3px, 0);
+  }
+}
