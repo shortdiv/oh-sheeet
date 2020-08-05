@@ -2,3 +2,9 @@
   build = "yarn build"
   publish = "_site"
   functions= "functions"
+
+[[redirects]]
+  from = "/thanks"
+  to = "/home"
+  status = 301
+  force = false
