@@ -8,3 +8,11 @@
   to = "/home"
   status = 301
   force = false
+
+[[redirects]]
+  from = "/products/papertowels/paper-towels"
+  to = "/products"
+  status = 301
+  force = false
+
+  
