@@ -1,3 +1,5 @@
+Error.stackTraceLimit = 1000;
+
 export async function onRequest(ev) {
   const timePassed = formatDistance(subDays(new Date(), 3), new Date());
   await ev.respondWith(
