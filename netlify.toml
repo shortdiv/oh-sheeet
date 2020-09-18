@@ -14,5 +14,6 @@
   to = "/products"
   status = 301
   force = false
+  edge_handler = "get-paper"
 
   
